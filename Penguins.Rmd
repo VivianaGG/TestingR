@@ -1,0 +1,38 @@
+---
+title: "Penguins"
+author: "Vivi"
+date: "8/24/2021"
+output:
+  pdf_document: default
+  html_document: default
+  word_document: default
+---
+# **Penguin Plot: Practice analysis**
+
+## *Setting up my environment*
+Note: setting up my R environment by loading the packages: 
+
+* The 'tidyverse' 
+* The 'palmerpenguins' 
+
+To get more information about how these packages work you can click here [link](http:packages.rstudio.com)
+
+```{r loading packages}
+library(tidyverse)
+library(palmerpenguins)
+```
+
+### Flipper and body mass in purple
+Here, we plot flippler length against body mas
+
+```{r visualize flipper and body mas in purple}
+penguins <- ggplot(data = penguins) + geom_point(mapping = aes(x = flipper_length_mm, y = body_mass_g), color = "purple")
+```
+
+
+## Including Plots
+
+```{r pressure, echo=FALSE}
+plot(penguins)
+```
+
